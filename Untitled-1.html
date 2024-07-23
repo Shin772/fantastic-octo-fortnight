@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影论坛分享</title>
+    <style>
+        /* 样式保持不变，略 */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>摄影论坛分享</h1>
+        <nav>
+            <a href="#home">主页</a>
+            <a href="#upload">图片上传</a>
+            <a href="#profile">个人中心</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h2>欢迎来到摄影论坛</h2>
+            <p>在这里，你可以分享你的摄影作品，参与讨论，与其他摄影爱好者交流心得。</p>
+            <!-- 图片展示区 -->
+            <div id="photo-gallery">
+                <!-- 动态加载的图片将显示在这里 -->
+            </div>
+        </section>
+
+        <section id="upload" class="section">
+            <h2>图片上传</h2>
+            <div class="upload-form">
+                <form id="upload-form">
+                    <label for="file-upload">选择图片：</label>
+                    <input type="file" id="file-upload" name="file-upload" accept="image/*">
+                    <button type="submit">上传图片</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="profile" class="section">
+            <h2>个人中心</h2>
+            <p>在个人中心，你可以查看和管理你的上传记录，编辑个人信息等。</p>
+            <!-- 个人中心内容 -->
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 摄影论坛分享</p>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>登录方式：</p>
+            <button id="wechat-login">微信登录</button>
+            <button id="sms-login">手机验证码登录</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript代码来处理图片上传、个人中心管理和登录功能
+        // 这里只是一个示例，实际实现需要根据您的服务器端逻辑来编写
+
+        // 图片上传处理
+        document.getElementById('upload-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // 这里应该有代码来处理文件上传，例如使用AJAX
+            console.log('图片上传功能需要服务器端支持');
+        });
+
+        // 登录模态框显示
+        function showLoginModal() {
+            var modal = document.getElementById('login-modal');
+            modal.style.display = 'block';
+        }
+
+        // 登录模态框关闭
+        document.getElementsByClassName('close')[0].onclick = function() {
+            var modal = document.getElementById('login-modal');
+            modal.style.display = 'none';
+        };
+
+        // 微信登录和手机验证码登录按钮事件处理
+        document.getElementById('wechat-login').onclick = function() {
+            // 微信登录逻辑
+            console.log('微信登录功能需要服务器端支持');
+        };
+
+        document.getElementById('sms-login').onclick = function() {
+            // 手机验证码登录逻辑
+            console.log('手机验证码登录功能需要服务器端支持');
+        };
+    </script>
+</body>
+</html>
